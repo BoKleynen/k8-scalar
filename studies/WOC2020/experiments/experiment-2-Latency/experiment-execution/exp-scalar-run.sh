@@ -5,9 +5,9 @@
 # e.g. --> .\experimentSurge 60 8,8,7,6,6,5,4,4,3,2,2,1,1,0 bsv1 bsv2
 # this will start 2 controllers that run stress.h --duration 300 8,8,7,6,6,5,4,4,3,2,2,1,1,0 bsv1 and --duration 300 0,1,1,2,2,3,4,4,5,6,6,7,8,8 bsv2
 
-# update: k8-scalar zal normaal dynamisch tenants overplaatsen, dus vorm moet zijn 8,8,8,8,8,8,8,8 want dezelfde controller blijft het sturen. 
+# update: k8-scalar zal normaal dynamisch tenants overplaatsen, dus vorm moet zijn 8,8,8,8,8,8,8,8 want dezelfde controller blijft het sturen.
 
-url=172.19.112.28:30123
+url=$(minikube ip -p csds):30123
 now1=$(date +"%T")
 
 echo "${now1} **-- Starting Experiment 2: Latency, with high workload for ${runDuration} seconds"
@@ -71,7 +71,7 @@ elif [ $single == "true" ]; then
 	# Setting up deadlines
 	deadTime=$( date -d "+ $counter seconds" +"%T" )
 	sed "s/\"deadline\":.*$/\"deadline\": \"${deadTime}\"/g" 1inc-upgrade-users.json > new-upgrade-users.json
-else 
+else
 	echo "Group stress testing"
 	kubectl cp normal-group-experiment.properties experiment-controller-0:/exp/etc
 	mkdir -p output
@@ -92,7 +92,7 @@ sleep 2
 
 now2=$(date +"%T")
 echo "${now2} -- Starting scalar script"
-echo "kubectl exec experiment-controller-0 -- bash normal.sh" > output/tmp-run.sh 
+echo "kubectl exec experiment-controller-0 -- bash normal.sh" > output/tmp-run.sh
 nohup ./output/tmp-run.sh > scalar.out 2> scalar.err < /dev/null &
 
 now3=$(date +"%T")

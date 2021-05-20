@@ -20,10 +20,10 @@ spec:
                 operator: In
                 values:
                 - experiment-controller
-            topologyKey: "kubernetes.io/hostname" 
+            topologyKey: "kubernetes.io/hostname"
       containers:
       - name: experiment-controller
-        image: decomads/experiment-controller 
+        image: bokleynen/experiment-controller
         volumeMounts:
         - name: kubeconfig
           mountPath: /root/.kube

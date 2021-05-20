@@ -3,7 +3,7 @@
 
 runs=$1
 duration=$2
-url=`minikube ip`:30123
+url=$(minikube ip -p csds):30123
 echo "Starting the run loop"
 for i in $(seq 1 1 ${runs})
 do
@@ -16,14 +16,14 @@ do
     bash exp-fullclean.sh --delete
 
     now3=$(date +"%T")
-    echo "${now3}: Let environment settle for 420 seconds"
-    sleep 420
+    echo "${now3}: Let environment settle for 120 seconds"
+    sleep 120
 
 
     now4=$(date +"%T")
     echo "${now4}: Start the scalar run && surge-validator"
     # Duurt 15s langer dan de duration om te starten
-    bash exp-scalar-run.sh 180 ${duration} > experiment.out 2> experiment.err 
+    bash exp-scalar-run.sh 180 ${duration} > experiment.out 2> experiment.err
     sleep 30
 
     now5=$(date +"%T")

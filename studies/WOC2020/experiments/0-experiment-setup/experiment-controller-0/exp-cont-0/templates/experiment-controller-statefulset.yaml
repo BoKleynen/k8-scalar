@@ -12,7 +12,7 @@ spec:
         technology: scalar
     spec:
       nodeSelector:
-        monitoringNode: "yes"
+        monitoringNode: "true"
       containers:
       - name: experiment-controller-0
         image: tourna/exp-ex:cont1
