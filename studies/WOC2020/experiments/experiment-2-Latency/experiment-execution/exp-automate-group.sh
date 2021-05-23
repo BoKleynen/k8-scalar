@@ -16,8 +16,8 @@ do
     bash exp-fullclean.sh --delete
 
     now3=$(date +"%T")
-    echo "${now3}: Let environment settle for 420seconds"
-    sleep 420
+    echo "${now3}: Let environment settle for 120seconds"
+    sleep 120
 
     now4=$(date +"%T")
     echo "${now4}: Start the scalar run && surge-validator"
