@@ -42,8 +42,8 @@ curl -X POST http://${url}/deployment?deployment-name=mt-api-v1
 curl -X POST http://${url}/deployment?deployment-name=mt-api-v2
 
 echo "Seeding the application database"
-kubectl exec $(kubectl get pods --no-headers -o custom-columns=":metadata.name" -l app=mt-api,version=1) npm run clear-db
-kubectl exec $(kubectl get pods --no-headers -o custom-columns=":metadata.name" -l app=mt-api,version=1) npm run seed-db
+kubectl exec $(kubectl get pods --no-headers -o custom-columns=":metadata.name" -l app=mt-api,version=1) -- npm run clear-db
+kubectl exec $(kubectl get pods --no-headers -o custom-columns=":metadata.name" -l app=mt-api,version=1) -- npm run seed-db
 
 
 # Setting up the experiment files
