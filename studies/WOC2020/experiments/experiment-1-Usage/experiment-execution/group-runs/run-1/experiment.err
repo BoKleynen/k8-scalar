@@ -1,14 +1,16 @@
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2584    0  1383  100  1201   1627   1413 --:--:-- --:--:-- --:--:--  1627100  2584    0  1383  100  1201   1618   1405 --:--:-- --:--:-- --:--:--  1617
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  2584    0  1383  100  1201   3150   2735 --:--:-- --:--:-- --:--:--  5886
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   174    0   174    0     0    173      0 --:--:--  0:00:01 --:--:--   173100   174    0   174    0     0    173      0 --:--:--  0:00:01 --:--:--   173
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   174    0   174    0     0    270      0 --:--:-- --:--:-- --:--:--   269100   174    0   174    0     0    270      0 --:--:-- --:--:-- --:--:--   269
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   169    0   169    0     0   1040      0 --:--:-- --:--:-- --:--:--  1043
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   169    0   169    0     0   1656      0 --:--:-- --:--:-- --:--:--  1656
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
+usage: date [-jnRu] [-d dst] [-r seconds] [-t west] [-v[+|-]val[ymwdHMS]] ... 
+            [-f fmt date | [[[mm]dd]HH]MM[[cc]yy][.ss]] [+format]
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1838    0     0  100  1838      0   1833  0:00:01  0:00:01 --:--:--  1834100  3286    0  1448  100  1838    819   1039  0:00:01  0:00:01 --:--:--  1039100  3286    0  1448  100  1838    818   1039  0:00:01  0:00:01 --:--:--  1039
-sleep: missing operand
-Try 'sleep --help' for more information.
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1734    0     0  100  1734      0   8500 --:--:-- --:--:-- --:--:--  8458100  3104    0  1370  100  1734   4691   5938 --:--:-- --:--:-- --:--:-- 10593
